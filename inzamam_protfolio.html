@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0-10/css/all.css" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hover-slide:hover {
+            color: #9f7aea;
+        }
+        .hover-bg-slide {
+            position: relative;
+            color: inherit;
+            text-decoration: none;
+            padding: 4px 8px;
+            display: inline-block;
+            background: linear-gradient(120deg, transparent 0%, transparent 50%, #ff435c 50%);
+            background-size: 240%;
+            transition: background 0.4s ease-in-out, color 0.4s ease-in-out;
+        }
+
+        .hover-bg-slide:hover {
+            background-position: 100%;
+            color: white; /* Text color change on hover */
+        }
+        .header {
+            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+            color: #ffffff;
+            border-radius: 0 0 12px 12px;
+            padding: 40px 24px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            font-weight: 700;
+        }
+        .header p {
+            font-size: 1.25rem;
+            margin: 8px 0 0;
+            font-weight: 500;
+        }
+        .header-contact {
+            margin-top: 24px;
+            font-size: 1rem;
+        }
+        .header-contact p {
+            margin: 8px 0;
+        }
+        .header-contact a {
+            color: #d1d5db;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .header-contact a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 24px;
+            margin-bottom: 24px;
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-4px);
+        }
+        .section-title {
+            border-bottom: 4px solid #3b82f6;
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1e40af;
+        }
+        .skills-item {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 1rem;
+            color: #333;
+        }
+        .skills-item .progress-bar {
+            height: 6px;
+            border-radius: 4px;
+            background-color: #e2e8f0;
+            overflow: hidden;
+            width: 60%;
+        }
+        .skills-item .progress-bar span {
+            display: block;
+            height: 100%;
+            background-color: #3b82f6;
+            transition: width 0.4s ease;
+        }
+        .skills-item span {
+            flex: 1;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body class="bg-teal-950">
+    <div class="flex flex-col md:flex-row max-w-6xl mx-auto my-6 px-4">
+        
+        <div class="w-full md:w-1/3 bg-white rounded-lg shadow-2xl p-6">
+            <div class="text-center">
+                <img class="w-24 h-24 md:w-32 md:h-32 rounded-full mx-auto" src="WhatsApp Image 2024-08-03 at 9.28.44 PM.jpeg" alt="Profile Image">
+                <h2 class="text-lg md:text-xl font-semibold mt-4">INZAMAM-UL-HAQ</h2>
+                <p class="text-gray-500">Web Developer</p>
+                <div class="mt-4">
+                    <div class="flex justify-center space-x-4">
+                        <a href="https://www.facebook.com/malick.inzamamulhaq" class="text-blue-600"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-blue-400"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/inzamam976/" class="text-pink-600"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/inzamam-malick-b8053a246/" class="text-blue-700"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/inzamammalick501" class="text-[#171515]"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-6">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-phone text-rose-500"></i>
+                    <p class="ml-4 text-gray-600">+92 334-6081794</p>
+                </div>
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-envelope text-rose-500"></i>
+                    <p class="ml-4 text-gray-600">inzamammalick501@gmail.com</p>
+                </div>
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-map-marker-alt text-rose-500"></i>
+                    <p class="ml-4 text-gray-600">Faisalabad, Pakistan</p>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-birthday-cake text-rose-500"></i>
+                    <p class="ml-4 text-gray-600">August 12, 2001</p>
+                </div>
+                <button id="downloadCV" class="mt-6 w-full bg-red-600 text-white py-2 px-4 rounded-lg">Download CV</button>
+            </div>
+        </div>
+
+        <div class="w-full md:w-2/3 mt-8 md:mt-0 md:ml-8">
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="flex flex-wrap items-center space-x-4">
+                    <button id="about-btn" class="px-4 py-2 text-rose-500 border-b-2 border-rose-500 hover-bg-slide">About</button>
+                    <button id="resume-btn" class="px-4 py-2 text-gray-500 hover-bg-slide">Resume</button>
+                    <button id="works-btn" class="px-4 py-2 text-gray-500 hover-bg-slide">Works</button>
+                    <button id="blogs-btn" class="px-4 py-2 text-gray-500 hover-bg-slide">Blogs</button>
+                    <button id="contact-btn" class="px-4 py-2 text-gray-500 hover-bg-slide">Contact</button>
+                </div>
+                <div id="content" class="mt-6">
+                    <!-- Dynamic content will be injected here -->
+                </div>
+        
+               
+            </div>
+        </div>
+        
+    </div>
+
+    
+
+<script>
+        document.getElementById('downloadCV').addEventListener('click', function() {
+            const link = document.createElement('a');
+            link.href = 'InzamamCV.pdf'; 
+            link.download = 'InzamamCV.pdf'; 
+            link.click();
+        });
+    </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const contentDiv = document.getElementById('content');
+        const extraInfoDiv = document.getElementById('extra-info');
+
+        const content = {
+            about: `
+                <h3 class="text-2xl font-semibold">About Me</h3>
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 " id="extra-info">
+            <div class="bg-purple-100 rounded-lg p-4 hover-bg-slide ">
+                <h4 class="text-lg font-semibold uppercase">Laravel | VueJS Developer</h4>
+                <p class="mt-2 text-gray-600 hover-bg-slide ">I am a Laravel and Vue.js developer with 2 years of experience in building dynamic web applications. I specialize in crafting efficient backends with Laravel and creating intuitive user interfaces with Vue.js.</p>
+            </div>
+            <div class="bg-yellow-100 rounded-lg p-4 hover-bg-slide ">
+                <h4 class="text-lg font-semibold uppercase">FrontEnd Developer</h4>
+                <p class="mt-2 text-gray-600 hover-bg-slide "> With 3 years of experience in Tailwind CSS and Bootstrap, I excel at creating responsive and visually appealing user interfaces. My expertise ensures seamless integration and a polished look across all devices.</p>
+            </div>
+        </div>
+            `,
+            resume: `
+                <h3 class="text-2xl font-semibold">Resume</h3>
+            
+
+    <!-- Summary -->
+    <section class="card">
+        <h2 class="section-title">Summary</h2>
+        <p class="text-gray-700">
+            Innovative web developer with 2 years of experience in creating dynamic and user-friendly web applications. Proficient in modern web technologies, and skilled in collaborating with teams to deliver high-quality solutions.
+        </p>
+    </section>
+
+    <!-- Education and Experience -->
+    <section class="flex flex-col md:flex-row mt-8 space-y-4 md:space-y-0 md:space-x-4">
+        <!-- Education -->
+        
+        <!-- Experience -->
+        <div class="w-full  card">
+            <h2 class="section-title ">Professional Experience</h2>
+            <p class="font-bold text-gray-800">Web Developer</p>
+            <p class="text-gray-700">Xelent Solutions | 2022 – Present</p>
+            <ul class="list-disc pl-5 text-gray-700 mt-2 space-y-2">
+                <li>Designed and developed a Pharmacy Point of Sale (POS) system with real-time features.</li>
+                <li>Led the development of a robust Auction System incorporating real-time bidding.</li>
+                <li>Collaborated with cross-functional teams to deliver user-centered solutions.</li>
+                <li>API Integration</li>
+            </ul>
+        </div>
+        
+    </section>
+<div class="w-full card">
+            <h2 class="section-title">Education</h2>
+            <p class="font-bold text-gray-800">GCUF</p>
+            <p class="text-gray-700">Associate Degree in Information Technology</p>
+            <p class="text-gray-700">2020 – 2022</p>
+        </div>
+    <!-- Skills -->
+    <section class="card">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-item">
+            <span>HTML</span>
+            <div class="progress-bar">
+                <span style="width: 90%;"></span>
+            </div>
+        </div>
+        <div class="skills-item">
+            <span>CSS</span>
+            <div class="progress-bar">
+                <span style="width: 85%;"></span>
+            </div>
+        </div>
+        <div class="skills-item">
+            <span>Bootstrap</span>
+            <div class="progress-bar">
+                <span style="width: 80%;"></span>
+            </div>
+        </div>
+        <div class="skills-item">
+            <span>TailwindCSS</span>
+            <div class="progress-bar">
+                <span style="width: 85%;"></span>
+            </div>
+        </div>
+        <div class="skills-item">
+            <span>JavaScript</span>
+            <div class="progress-bar">
+                <span style="width: 80%;"></span>
+            </div>
+        </div>
+        <div class="skills-item">
+            <span>Laravel</span>
+            <div class="progress-bar">
+                <span style="width: 75%;"></span>
+            </div>
+        </div>
+        <div class="skills-item">
+            <span>Vue.js</span>
+            <div class="progress-bar">
+                <span style="width: 70%;"></span>
+            </div>
+        </div>
+        <div class="skills-item">
+            <span>Vuex</span>
+            <div class="progress-bar">
+                <span style="width: 65%;"></span>
+            </div>
+        </div>
+        <div class="skills-item">
+            <span>MySQL</span>
+            <div class="progress-bar">
+                <span style="width: 75%;"></span>
+            </div>
+        </div>
+        <div class="skills-item">
+            <span>Project Management</span>
+            <div class="progress-bar">
+                <span style="width: 70%;"></span>
+            </div>
+        </div>
+    </section>
+   
+            `,
+            works: `
+                <h3 class="text-2xl font-semibold">Works</h3>
+               <!-- Projects -->
+    <section class="card">
+        <h2 class="section-title">Projects</h2>
+        <div class="mb-4">
+            <p class="font-bold text-gray-800 uppercase">Pharmacy POS</p>
+            <p class="text-gray-700">Developed a comprehensive Pharmacy Point of Sale (POS)
+                system. The system includes features such as inventory
+                management, sales tracking, customer management, and receipt
+                generation. Implemented functionalities for real-time stock
+                updates, barcode scanning, and detailed sales reports. Utilized
+                technologies including Laravel for the backend and Vue.js for
+                the frontend, ensuring a responsive and user-friendly interface.
+                The project demonstrates proficiency in full-stack development,
+                database management, and integration of modern web
+                technologies</p>
+        </div>
+        <div class="mb-4">
+            <p class="font-bold text-gray-800 uppercase">POS For Resturent</p>
+            <p class="text-gray-700">Developed an advanced Restaurant Point of Sale (POS) system. This
+                system encompasses features such as table management, order
+                tracking, menu customization, and billing. Implemented
+                functionalities for real-time order updates, kitchen display systems
+                (KDS), and detailed sales analytics. Utilized technologies including
+                Laravel for the backend and Vue.js for the frontend, ensuring a
+                seamless and intuitive user experience. The project highlights
+                expertise in full-stack development, database management, and the
+                integration of modern web technologies for efficient restaurant
+                operations.
+                </p>
+        </div>
+        <div class="mb-4">
+            <p class="font-bold text-gray-800 uppercase">Hospital Management System</p>
+            <p class="text-gray-700">Designed and developed a comprehensive Hospital Management System using Vue.js and Laravel framework.
+            Implemented modules for OPD, OT, Inventory, and Lab Management, ensuring seamless integration and functionality.
+            Created responsive and user-friendly interfaces to improve usability for hospital staff and administrators.
+            Developed custom reports and analytics dashboards to monitor key metrics and improve decision-making processes.
+            Collaborated with cross-functional teams including doctors, nurses, and administrators to gather requirements and
+            implement solutions.
+            </p>
+        </div>
+        <div class="mb-4">
+            <p class="font-bold text-gray-800 uppercase">DJ Booking</p>
+            <p class="text-gray-700">Developed and maintained a comprehensive DJ booking system using Laravel framework.
+Implemented features for leave management, allowing DJs to request leaves and managers to approve them.
+Designed and optimized matrix bookings for scheduling DJs and technicians, ensuring smooth operations and minimal
+conflicts.
+Integrated payment gateways and invoicing systems to streamline financial transactions.
+Collaborated closely with artists, technicians, and clients to meet their requirements and ensure successful events.
+</p>
+        </div>
+        <div class="mb-4">
+            <p class="font-bold text-gray-800 uppercase">Auction System</p>
+            <p class="text-gray-700">Developed a robust Auction System, incorporating features such as user registration, item listings, real-time bidding, and
+auction management. Implemented functionalities for automatic bid increments, countdown timers, and bid history
+tracking. Utilized technologies including Laravel for the backend and Vue.js for the frontend, ensuring a responsive and
+user-friendly interface. The project showcases skills in full-stack development, real-time data processing, and the
+integration of secure, scalable web technologies to facilitate seamless auction operations.
+</p>
+        </div>
+        <div class="mb-4">
+            <p class="font-bold text-gray-800">Ecommerce Website</p>
+            <p class="text-gray-700">Developed and maintained a scalable eCommerce platform using Vue.js for front-end and Laravel for backend
+development.
+Implemented features such as product catalog, shopping cart, checkout process, and payment gateway integration.
+Optimized performance and user experience through responsive design and efficient data management.
+Conducted code reviews and mentored junior developers to ensure coding standards and best practices.</p>
+        </div>
+        <div class="mb-4">
+            <p class="font-bold text-gray-800">Land Sale Purchase Website</p>
+            <p class="text-gray-700">Designed and developed a land sale and purchase system using Vuex, Vue.js for the front-end, and Laravel for
+backend development.
+Implemented features for property listings, search functionality, user authentication, and payment integration.
+Ensured data security and privacy compliance by implementing robust authentication and authorization
+mechanisms.
+Optimized performance and user experience through responsive design and efficient data fetching techniques.
+</p>
+        </div>
+        <div class="mb-4">
+            <p class="font-bold text-gray-800">Vehicle Reservation</p>
+            <p class="text-gray-700">Led the development of a vehicle reservation system using Vue.js and Laravel, enabling users to book vehicles online.
+Implemented features for vehicle availability, booking calendars, pricing, and user authentication.
+Integrated third-party APIs for vehicle tracking and payment processing, ensuring seamless operations.
+Collaborated with cross-functional teams including UX/UI designers and QA engineers to deliver a user-friendly and
+reliable system.
+</p>
+        </div>
+        <div class="mb-4">
+            <p class="font-bold text-gray-800">University Attendance System</p>
+            <p class="text-gray-700">Developed and implemented a University Attendance System using Vue.js for the front-end and Laravel for backend
+development.
+Integrated Face API for biometric authentication and facial recognition to track student attendance accurately.
+Implemented features for real-time attendance monitoring, reporting, and analytics.
+Ensured data security and privacy compliance by implementing robust authentication and encryption mechanisms.
+Optimized performance and user experience through responsive design and efficient data fetching techniques.</p>
+        </div>
+    </section>
+            `,
+            blogs: `
+                <h3 class="text-2xl font-semibold">Services</h3>
+                <p class="text-lg text-gray-500 mb-12">Here's what I offer</p>
+           <div class="text-center  bg-gray-50">
+    
+    <div class="flex flex-col sm:flex-row justify-center space-y-8 sm:space-y-0 sm:space-x-8">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 w-full sm:w-72">
+            <div class="bg-blue-500 h-36 rounded-t-xl flex items-center justify-center">
+                <span class="text-white text-6xl">📱</span>
+            </div>
+            <div class="p-6">
+                <h3 class="text-2xl font-bold mb-3">Responsive Websites</h3>
+                <p class="text-gray-600 text-sm">Create responsive websites that work on all devices and offer a seamless experience to users.</p>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 w-full sm:w-72">
+            <div class="bg-green-500 h-36 rounded-t-xl flex items-center justify-center">
+                <span class="text-white text-6xl">💻</span>
+            </div>
+            <div class="p-6">
+                <h3 class="text-2xl font-bold mb-3">Web Apps</h3>
+                <p class="text-gray-600 text-sm">Develop powerful and scalable web applications tailored to your business needs.</p>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 w-full sm:w-72">
+            <div class="bg-yellow-500 h-36 rounded-t-xl flex items-center justify-center">
+                <span class="text-white text-6xl">🖥️</span>
+            </div>
+            <div class="p-6">
+                <h3 class="text-2xl font-bold mb-3">Applications</h3>
+                <p class="text-gray-600 text-sm">Design and build applications that provide users with engaging experiences.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+            `,
+            contact: `
+                <h3 class="text-2xl font-semibold">Contact</h3>
+            <div class="container flex flex-col mx-auto bg-white">
+    <div class="w-full draggable">
+        <div class="container flex flex-col items-center gap-16 mx-auto my-32">
+            <div class="grid w-full grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-2">
+                <!-- Email Card -->
+                <div class="flex flex-col items-center gap-3 px-8 py-10 bg-gradient-to-r from-purple-100 to-blue-100 rounded-3xl shadow-lg">
+                    <span class="p-4 bg-white rounded-full shadow-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                            <!-- SVG Path -->
+                            <path d="M31.9904 13.965L22.4166 4.40166C21.6057 3.60976 20.5294 3.16817 19.4104 3.16817C18.2914 3.16817 17.2151 3.60976 16.4041 4.40166L6.8304 13.9017C6.40502 14.283 6.0629 14.7524 5.82645 15.279C5.58999 15.8056 5.46454 16.3776 5.45831 16.9575V30.5425C5.47456 31.6946 5.93476 32.793 6.73808 33.5973C7.5414 34.4016 8.62236 34.846 9.74415 34.8333H28.9225C30.0443 34.846 31.1252 34.4016 31.9285 33.5973C32.7319 32.793 33.1921 31.6946 33.2083 30.5425V16.9575C33.2071 16.4009 33.0989 15.85 32.8899 15.3365C32.6809 14.823 32.3752 14.3569 31.9904 13.965ZM18.47 6.68166C18.7058 6.46025 19.0138 6.33747 19.3333 6.33747C19.6528 6.33747 19.9608 6.46025 20.1966 6.68166L28.5833 15.0417L20.1504 23.4017C19.9146 23.6231 19.6066 23.7459 19.2871 23.7459C18.9675 23.7459 18.6596 23.6231 18.4237 23.4017L10.0833 15.0417L18.47 6.68166ZM30.125 30.5425C30.1052 30.8533 29.9688 31.144 29.7445 31.3537C29.5203 31.5633 29.2256 31.6755 28.9225 31.6667H9.74415C9.44102 31.6755 9.14636 31.5633 8.9221 31.3537C8.69785 31.144 8.56147 30.8533 8.54165 30.5425V17.9708L14.7854 24.1458L12.2262 26.6792C11.9391 26.9758 11.7779 27.3771 11.7779 27.7954C11.7779 28.2137 11.9391 28.615 12.2262 28.9117C12.3695 29.066 12.5417 29.1891 12.7324 29.2734C12.9232 29.3578 13.1286 29.4017 13.3362 29.4025C13.7332 29.4009 14.1142 29.2421 14.4 28.9592L17.1287 26.2675C17.8065 26.6928 18.5853 26.9179 19.3796 26.9179C20.1738 26.9179 20.9527 26.6928 21.6304 26.2675L24.3591 28.9592C24.6449 29.2421 25.026 29.4009 25.4229 29.4025C25.6306 29.4017 25.8359 29.3578 26.0267 29.2734C26.2174 29.1891 26.3896 29.066 26.5329 28.9117C26.82 28.615 26.9812 28.2137 26.9812 27.7954C26.9812 27.3771 26.82 26.9758 26.5329 26.6792L23.9583 24.1458L30.125 17.9708V30.5425Z" fill="#581ff8"/>
+                        </svg>
+                    </span>
+                    <p class="text-2xl font-extrabold text-gray-800">Email</p>
+                    <p class="text-base leading-7 text-gray-600">Contact us at</p>
+                    <a class="text-lg font-bold text-indigo-600" href="mailto: inzamammalick501@gmail.com">inzamammalick501@gmail.com</a>
+                </div>
+                <!-- Phone Card -->
+                <div class="flex flex-col items-center gap-3 px-8 py-10 bg-gradient-to-r from-yellow-100 to-red-100 rounded-3xl shadow-lg">
+                    <span class="p-4 bg-white rounded-full shadow-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                            <!-- SVG Path -->
+                            <path d="M30.4237 20.5833C30.0846 20.5833 29.73 20.4725 29.3908 20.3933C28.7045 20.2357 28.0297 20.0294 27.3712 19.7758C26.656 19.5086 25.8699 19.5225 25.164 19.8148C24.4582 20.1071 23.8826 20.6572 23.5479 21.3592L23.2087 22.0875C21.7115 21.2154 20.3283 20.1513 19.0925 18.9208C17.8944 17.6516 16.8583 16.231 16.0092 14.6933L16.7183 14.3608C17.4018 14.0171 17.9374 13.4259 18.222 12.701C18.5067 11.9761 18.5202 11.1687 18.26 10.4342C18.0151 9.7518 17.8143 9.05363 17.6587 8.34417C17.5817 7.99584 17.52 7.63167 17.4737 7.28334C17.2865 6.16807 16.7177 5.1581 15.8698 4.4353C15.0219 3.7125 13.9506 3.32439 12.8487 3.34084H8.20832C7.55657 3.33996 6.92445 3.58784 6.45184 4.03109C5.97924 4.47435 5.70593 5.08201 5.68749 5.71917C5.63768 7.344 5.89798 8.96466 6.45165 10.4625C8.07622 14.9248 10.8898 18.9803 14.5483 22.4725C18.2068 25.9646 22.6073 28.7353 27.39 30.4758C28.8678 30.9756 30.4869 31.25 32.1041 31.2917C32.7413 31.2732 33.3489 30.9999 33.7921 30.5273C34.2354 30.0547 34.4833 29.4226 34.4825 28.7708V24.1483C34.5 23.0464 34.1127 21.9751 33.3899 21.1272C32.6671 20.2793 31.6571 19.7104 30.5418 19.5233L30.4237 20.5833Z" fill="#e01b27"/>
+                        </svg>
+                    </span>
+                    <p class="text-2xl font-extrabold text-gray-800">Phone</p>
+                    <p class="text-base leading-7 text-gray-600">Get in touch via phone</p>
+                    <a class="text-lg font-bold text-indigo-600" href="tel: +92 334-6081794">+92 334-6081794</a>
+                </div>
+             
+            </div>
+        </div>
+    </div>
+</div>
+
+            `
+        };
+
+        function updateContent(buttonId) {
+            // Remove the 'text-rose-500' class from all buttons
+            document.querySelectorAll('button').forEach(button => {
+                button.classList.remove('text-rose-500');
+                button.classList.add('text-gray-500');
+                button.classList.remove('border-b-2', 'border-rose-500');
+            });
+            
+            // Add the 'text-rose-500' class to the clicked button
+            const activeButton = document.getElementById(buttonId);
+            activeButton.classList.add('text-rose-500');
+            activeButton.classList.add('border-b-2');
+            activeButton.classList.add('border-rose-500');
+
+            // Update the content based on the button clicked
+            const key = buttonId.split('-')[0];
+            contentDiv.innerHTML = content[key] || '';
+        }
+
+        // Set the default button and content
+        updateContent('about-btn');
+
+        document.getElementById('about-btn').addEventListener('click', () => updateContent('about-btn'));
+        document.getElementById('resume-btn').addEventListener('click', () => updateContent('resume-btn'));
+        document.getElementById('works-btn').addEventListener('click', () => updateContent('works-btn'));
+        document.getElementById('blogs-btn').addEventListener('click', () => updateContent('blogs-btn'));
+        document.getElementById('contact-btn').addEventListener('click', () => updateContent('contact-btn'));
+    });
+</script>
+
+
+</body>
+
+</html>
